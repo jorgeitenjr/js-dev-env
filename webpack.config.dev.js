@@ -3,6 +3,7 @@
  */
 import webpack from "webpack";
 import path from "path";
+import HtmlWebpackPlugin from "html-webpack-plugin";
 
 export default {
   devtool: 'inline-source-map',
@@ -16,6 +17,10 @@ export default {
     filename: 'bundle.js'
   },
   plugins: [
+    new HtmlWebpackPlugin({
+      template: 'src/index.html',
+      inject: true
+    }),
     new webpack.LoaderOptionsPlugin({
       debug: true,
       noInfo: false,

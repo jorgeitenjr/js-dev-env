@@ -1,6 +1,8 @@
 /**
  * Created by jorgeiten on 22/11/17.
  */
+import './index.css';
+
 
 import {getUsers, deleteUser} from "./api/userApi";
 
